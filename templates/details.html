@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="d-flex justify-content-start">
+    <div>
+        <p style="color: antiquewhite;font-size:17px; position:absolute;">02:38</p>
+        <i style="color: antiquewhite;font-size:20px; position:absolute;margin-left:17%;" class='bx bx-signal-4' ></i>
+        <i style="color: antiquewhite;font-size:20px; position:absolute;margin-left:18.5%;margin-top:.1%;" class='bx bx-battery' ></i>
+
+    </div>
+</div>
+
+
+<div class="container allil">
+    
+    
+   
+        
+        
+        <img style="width: 110px;height:110px;border-radius:50%;margin-top: 40%;margin-left:37%;" src="{{details.image.url}}" alt="">
+        <h6 style="margin-top: 6%;text-align:center;font-size:25px;color:rgb(204, 200, 200);">{{details.name}}</h6>
+        <p style="margin-top: 7%;text-align:center; font-size:15px;color:rgb(204, 200, 200);">Mobile {{details.phone}}</p>
+        <div>
+    <a href="{% url 'call' details.id %}">
+        <i style="margin-top: 10%;margin-left:21%;font-size:25px;color:rgb(204, 200, 200);background-color:rgb(3, 166, 76);width:35px;height:35px;padding:1.5%;border-radius:50%;" class='bx bxs-phone' ></i>
+    </a>
+   
+    <i style="margin-top: 10%;margin-left:15%;font-size:25px;color:rgb(204, 200, 200);background-color:rgb(6, 94, 132);width:35px;height:35px;padding:1.5%;border-radius:50%;"  class='bx bxs-message-rounded' ></i>
+    <i style="margin-top: 10%;margin-left:15%;font-size:25px;color:rgb(204, 200, 200);background-color:rgb(1, 100, 1);width:35px;height:35px;padding:1.5%;border-radius:50%;"  class='bx bx-video' ></i>
+</div>
+    <i style="color: aliceblue;margin-top:74%; margin-left:7%;font-size:20px;" class='bx bx-share-alt' ></i>
+    <i style="color: aliceblue;margin-top:71%;margin-left:20%;font-size:20px;" class='bx bx-star' ></i>
+    <a href="{% url 'update' details.id %}">
+    <i style="color: aliceblue;margin-top:71%;margin-left:20%;font-size:20px;" class='bx bx-pencil'></i>
+     </a>
+     <a href="{% url 'delete' details.id %}">
+    <img style="width:20px;margin-left:20%;margin-top:-3%;" src="{% static 'images/icons8-delete-24 (2).png' %}" alt="">
+    </a>
+
+   
+    </div>
+   
+{% endblock %}

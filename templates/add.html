@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div style="background-color: black; width:395px;height: 800px; margin-left: -3.5%;margin-top:-46%;box-sizing:border-box;border-radius:8px;" class="container">
+<form style="margin-top: 45%;" class="row g-3" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div style="margin-top: 65%;" class="col-md-4">
+  
+      <input  type="text" class="form-control"  name="name" placeholder="Name" required>
+    </div>
+    <div style="margin-top: 65%;" class="col-md-4">
+      <input type="text" class="form-control"  name="phone"  placeholder="Phone" required>
+    </div>
+    <div style="margin-top: 65%;" class="col-md-4">
+        <input type="email" class="form-control"  name="email"  placeholder="Email" required>
+      </div>
+      <div class="col-md-4">
+        <input style="width: 120px;" type="text"  name="alter" class="form-control"  placeholder="Alternative" required>
+      </div>
+      <div class="col-md-4">
+        <input style="margin-left:10%;" type="file" class="form-control"  name="image" placeholder="Image" required>
+      </div>
+   
+    <div class="col-12">
+      <button class="button-2" role="button">Save</button>
+    </div>
+  </form>
+</div>
+{% endblock %}
+
+

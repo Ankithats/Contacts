@@ -1,0 +1,46 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="d-flex justify-content-start">
+    <div>
+        <p style="color: antiquewhite;font-size:17px; position:absolute;">02:38</p>
+        <i style="color: antiquewhite;font-size:20px; position:absolute;margin-left:17%;" class='bx bx-signal-4' ></i>
+        <i style="color: antiquewhite;font-size:20px; position:absolute;margin-left:18.5%;margin-top:.1%;" class='bx bx-battery' ></i>
+
+    </div>
+    <div>
+        <h6 style="color: antiquewhite;font-size:28px; position:absolute;margin-left:7%;margin-top:2.5%;" >Contacts</h6>
+    </div>
+    <div>
+        <a href="{% url 'add' %}">
+    <i style="color: antiquewhite;font-size:30px; position:absolute;margin-left:14%;margin-top: 6.5%;" class='bx bx-plus'></i>
+     </a>
+    <i style="color: antiquewhite;font-size:30px; position:absolute;margin-left:16.5%;margin-top: 6.5%;" class='bx bx-search' ></i>
+    <i style="color: antiquewhite;font-size:30px; position:absolute;margin-left:18.5%;margin-top: 6.5%;" class='bx bx-dots-vertical-rounded'></i>
+    <i style="color: antiquewhite;font-size:30px; position:absolute;margin-top: 6.5%;" class='bx bx-menu' ></i>
+</div>
+</div>
+<div id="overflowTest"  class="container alll">
+    
+   
+   
+        {% for contact in contacts %}
+     
+        <div class="d-flex justify-content-start my-2">
+            <div >
+                <a href="{% url 'details' contact.id %}">
+            <img style="width: 50px;height:50px;border-radius:50%;margin-top:20% " src="{{contact.image.url}}" alt="">
+            <h6 style="margin-left:100px;;font-size:20px;color:black;margin-top:-23%;">{{contact.name}}</h6>
+          </a>
+    
+
+        {% endfor %}
+    </div>
+   
+        
+    </div>
+    </div>
+
+ 
+
+{% endblock %}

@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<div class="d-flex justify-content-start">
+    <div>
+        <p style="color: antiquewhite;font-size:17px; position:absolute;">02:38</p>
+        <i style="color: antiquewhite;font-size:20px; position:absolute;margin-left:17%;" class='bx bx-signal-4' ></i>
+        <i style="color: antiquewhite;font-size:20px; position:absolute;margin-left:18.5%;margin-top:.1%;" class='bx bx-battery' ></i>
+       
+    </div>
+    <p style="color: antiquewhite;font-size:15px; position:absolute;margin-left:9%;margin-top:3%;">Calling...</p>
+</div>
+<div  class="container allili">
+    
+    
+    <div class="d-flex justify-content-start">
+        <div class="call-animation">
+        <img class="cl"  src="{{call.image.url}}" alt="">
+        
+        </div>
+       
+    </a>
+       
+   
+
+    </div>
+    <div  class="container clii">
+        <div>
+            <i style="color: aliceblue;font-size:35px;position:absolute;margin-left:2%;margin-top:2%;" class='bx bx-plus'></i>
+            <i style="color: aliceblue;font-size:35px;position:absolute;margin-left:7%;margin-top:2%;" class='bx bx-video'></i>
+            <i style="color: aliceblue;font-size:35px;position:absolute;margin-left:12%;margin-top:2%;" class='bx bx-bluetooth'></i>
+        </div>
+            <div>
+                <i style="color: aliceblue;font-size:35px;position:absolute;margin-left:2%;margin-top:8%;" class='bx bxs-volume-full' ></i>
+                <i style="color: aliceblue;font-size:35px;position:absolute;margin-left:7%;margin-top:8%;" class='bx bx-microphone-off' ></i>
+                <i style="color: aliceblue;font-size:35px;position:absolute;margin-left:12%;margin-top:8%;" class='bx bx-dialpad' ></i>
+            </div>
+    <a href="{% url 'home' %}">
+       <img style="border-radius:50% ;width:50px;height:50px;margin-top:85%;margin-left:44%;" src="{% static 'images/icons8-end-call-24 (1).png' %}" alt="">
+    </a>
+   
+
+    </div>
+    </div>
+{% endblock %}
